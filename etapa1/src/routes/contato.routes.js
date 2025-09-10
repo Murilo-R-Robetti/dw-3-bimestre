@@ -18,4 +18,7 @@ export async function contatoRoutes(fastify, options) {
 
   fastify.delete('/contatos/:id', 
 	  (request, reply) => contatoController.deleteContato(request, reply));
+//PARTE DA PROVA
+  fastify.get('/contatos/:search', 
+	  (request, reply) => contatoController.getContatos(request, reply));
 }
